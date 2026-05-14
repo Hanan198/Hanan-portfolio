@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hope Charity</title>
+
+    <style>
+
+        body{
+            margin: 0;
+            font-family: Arial;
+            background-image: url("https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1200");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .overlay{
+            background-color: rgba(0,0,0,0.6);
+            min-height: 100vh;
+            padding: 40px;
+        }
+
+        .container{
+            background-color: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        h1{
+            color: darkblue;
+            text-align: center;
+        }
+
+        h2{
+            color: green;
+        }
+
+        p{
+            line-height: 1.7;
+        }
+
+        input{
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid gray;
+        }
+
+        button{
+            width: 100%;
+            padding: 12px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: darkgreen;
+        }
+
+        #message{
+            display: none;
+            color: green;
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .footer{
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        a{
+            color: darkblue;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="overlay">
+
+        <div class="container">
+
+            <h1>Hope Charity</h1>
+
+            <p>
+                Hope Charity is a non-profit organization dedicated to helping
+                poor families, children, and communities in need.
+                Our mission is to provide food, education, healthcare,
+                and support for a better future.
+            </p>
+
+            <h2>Our Goals</h2>
+
+            <p>
+                We believe every person deserves hope, kindness,
+                and the opportunity to live a better life.
+                Together, we can make a difference through donations
+                and volunteer work.
+            </p>
+
+            <h2>Donation Form</h2>
+
+            <form>
+
+                <input type="text" placeholder="Full Name">
+
+                <input type="email" placeholder="Email Address">
+
+                <input type="text" placeholder="Your City">
+
+                <input type="number" placeholder="Donation Amount">
+
+                <button type="button" onclick="showMessage()">
+                    Donate Now
+                </button>
+
+            </form>
+
+            <p id="message">
+                ❤️ Thank you, you made someone smile today!
+            </p>
+
+            <div class="footer">
+
+                <br>
+
+                <a href="index.html">
+                    Back Home
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function showMessage(){
+            document.getElementById("message").style.display = "block";
+        }
+
+    </script>
+
+</body>
+
+</html>

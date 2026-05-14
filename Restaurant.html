@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Restaurant</title>
+
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial;
+            background-image: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200");
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .overlay{
+            background-color: rgba(0,0,0,0.65);
+            min-height: 100vh;
+            padding: 30px;
+        }
+
+        header{
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1{
+            font-size: 45px;
+        }
+
+        header p{
+            font-size: 20px;
+        }
+
+        .side-menu{
+            position: fixed;
+            left: -260px;
+            top: 0;
+            width: 240px;
+            height: 100%;
+            background-color: #3b1f1f;
+            padding: 20px;
+            transition: 0.4s;
+            z-index: 10;
+        }
+
+        .side-menu a{
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        .menu-btn{
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            background-color: orange;
+            color: black;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            z-index: 20;
+        }
+
+        .show{
+            left: 0;
+        }
+
+        section{
+            background-color: rgba(255,255,255,0.95);
+            color: black;
+            margin: 30px auto;
+            padding: 25px;
+            max-width: 900px;
+            border-radius: 15px;
+        }
+
+        h2{
+            text-align: center;
+            color: #8b0000;
+        }
+
+        .dish{
+            display: inline-block;
+            width: 250px;
+            background-color: #fff7ef;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .dish img{
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .price{
+            color: green;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        button{
+            background-color: #8b0000;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #5c0000;
+        }
+
+        input, textarea{
+            width: 95%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid gray;
+        }
+
+        .contact-btn{
+            display: inline-block;
+            background-color: orange;
+            color: black;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin: 8px;
+        }
+    </style>
+</head>
+<br><br>
+<body>
+
+
+
+<div class="side-menu" id="sideMenu">
+    <a href="#" onclick="closeMenu()">✖ Close</a>
+    <a href="#home">Home</a>
+    <a href="#menu">Food Menu</a>
+    <a href="#contact">Contact</a>
+    <a href="index.html">Back Portfolio</a>
+</div>
+
+<div class="overlay">
+
+    <header id="home">
+        <h1>Hanan Restaurant</h1>
+        <p>Fresh food, delicious taste, and a warm place for everyone.</p>
+        <button onclick="document.getElementById('menu').scrollIntoView()">
+            View Menu
+        </button>
+    </header>
+
+    <section>
+        <h2>About Our Restaurant</h2>
+        <p>
+            Hanan Restaurant is a modern restaurant that serves fresh meals,
+            tasty desserts, and natural drinks. We care about quality,
+            clean food, and a comfortable experience for every customer.
+        </p>
+    </section>
+
+    <section id="menu">
+        <h2>Our Food Menu</h2>
+		<div class="dish">
+    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800">
+    <h3>Special Pizza</h3>
+    <p>Pizza with cheese and pepperoni.</p>
+    <p class="price">£16</p>
+    <button>Order Now</button>
+</div>
+
+<div class="dish">
+    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=800">
+    <h3> Burger</h3>
+    <p>Beef&chicken burger</p>
+    <p class="price">£11</p>
+    <button>Order Now</button>
+</div>
+
+<div class="dish">
+    <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=800">
+    <h3> Meal</h3>
+    <p>Grilled beef&chicken with fries.</p>
+    <p class="price">£15</p>
+    <button>Order Now</button>
+</div>
+
+<div class="dish">
+    <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=800">
+    <h3>Italian Pasta</h3>
+    <p>Creamy pasta with sauce.</p>
+    <p class="price">£13</p>
+    <button>Order Now</button>
+</div>
+
+        <div class="dish">
+		
